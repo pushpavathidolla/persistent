@@ -1,0 +1,9 @@
+FROM busybox
+
+RUN mkdir -p /data && \
+    echo "my world" > /data/file1.txt && \
+    echo "Greetings from docker" > /data/file2.txt
+
+WORKDIR /data
+
+VOLUME /data
